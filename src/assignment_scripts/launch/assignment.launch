@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find robot_description)/launch/sim_assignment.launch"/> 
+    <node name="turtlesim_node" pkg="turtlesim" type="turtlesim_node"/>
+    <node name="gtp_service" pkg="robot_description" type="gtp_service.py"/>
+    <node name="srvCaller_node" pkg="assignment_scripts" type="srvCaller_node.py"/>
+    <node name="randPos_service" pkg="assignment_scripts" type="randPos_service.py"/>
+    <node name="reply_node" pkg="assignment_scripts" type="reply_node.py"/>
+
+
+
+</launch>
